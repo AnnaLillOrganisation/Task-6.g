@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    table {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    caption {
+      font-size: 24px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid rgba(5, 5, 5, 0.99);
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <caption>My Table</caption>
+  <br>
+  <br>
+  <br>
+  <tr>
+    <th> Brand</th>
+    <th> Model</th>
+    <th> Year</th>
+  </tr>
+  <tr th:each="car:${printCar}">
+    <td th:text="${car.brand}"> Model</td>
+    <td th:text="${car.model}"> Color</td>
+    <td th:text="${car.year}"> Driver</td>
+  </tr>
+</table>
+</body>
+</html>
